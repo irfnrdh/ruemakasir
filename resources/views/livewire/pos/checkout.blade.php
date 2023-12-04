@@ -14,7 +14,7 @@
                 @endif
 
                 <div class="form-group">
-                    <label for="customer_id">Customer <span class="text-danger">*</span></label>
+                    <label for="customer_id">Pelanggan <span class="text-danger">*</span></label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <a href="{{ route('customers.create') }}" class="btn btn-primary">
@@ -22,7 +22,7 @@
                             </a>
                         </div>
                         <select wire:model.live="customer_id" id="customer_id" class="form-control">
-                            <option value="" selected>Select Customer</option>
+                            <option value="" selected>Pilih Pelanggan</option>
                             @foreach($customers as $customer)
                                 <option value="{{ $customer->id }}">{{ $customer->customer_name }}</option>
                             @endforeach
@@ -34,10 +34,10 @@
                     <table class="table">
                         <thead>
                         <tr class="text-center">
-                            <th class="align-middle">Product</th>
-                            <th class="align-middle">Price</th>
-                            <th class="align-middle">Quantity</th>
-                            <th class="align-middle">Action</th>
+                            <th class="align-middle">Produk</th>
+                            <th class="align-middle">Harga</th>
+                            <th class="align-middle">Qty</th>
+                            <th class="align-middle">Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -71,7 +71,7 @@
                             <tr>
                                 <td colspan="8" class="text-center">
                         <span class="text-danger">
-                            Please search & select products!
+                            Silakan cari & pilih produk!
                         </span>
                                 </td>
                             </tr>
@@ -86,15 +86,15 @@
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <tr>
-                                <th>Order Tax ({{ $global_tax }}%)</th>
+                                <th>Pajak ({{ $global_tax }}%)</th>
                                 <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
                             </tr>
                             <tr>
-                                <th>Discount ({{ $global_discount }}%)</th>
+                                <th>Diskon ({{ $global_discount }}%)</th>
                                 <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                             </tr>
                             <tr>
-                                <th>Shipping</th>
+                                <th>Pengiriman</th>
                                 <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                                 <td>(+) {{ format_currency($shipping) }}</td>
                             </tr>

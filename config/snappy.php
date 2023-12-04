@@ -35,7 +35,9 @@ return [
 
     'pdf' => [
         'enabled' => true,
+        // Linux
         'binary'  => env('WKHTML_PDF_BINARY', base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'),),
+        // Windows
         // 'binary'  => env('WKHTML_PDF_BINARY', 'C:\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'),
         'timeout' => false,
         'options' => [

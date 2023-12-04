@@ -52,7 +52,7 @@ class Checkout extends Component
         if ($this->customer_id != null) {
             $this->dispatch('showCheckoutModal');
         } else {
-            session()->flash('message', 'Please Select Customer!');
+            session()->flash('message', 'Silahkan pilih pelanggannya!');
         }
     }
 

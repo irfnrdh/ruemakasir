@@ -11,7 +11,7 @@
 @can('delete_customers')
     <button id="delete" class="btn btn-danger btn-sm" onclick="
         event.preventDefault();
-        if (confirm('Are you sure? It will delete the data permanently!')) {
+        if (confirm('Apakah anda yakin ingin menghapus data pelanggan anda ini? Data akan dihapus secara permanen!')) {
         document.getElementById('destroy{{ $data->id }}').submit()
         }
         ">
