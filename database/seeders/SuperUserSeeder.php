@@ -19,7 +19,7 @@ class SuperUserSeeder extends Seeder
         $user = User::create([
             'name' => 'Kang Mimin',
             'email' => 'hi@ruema.xyz',
-            'password' => Hash::make(katakatalam4),
+            'password' => Hash::make("katakatalam4"),
             'is_active' => 1
         ]);
 
